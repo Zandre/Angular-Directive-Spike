@@ -1,7 +1,7 @@
 import { Directive, ElementRef, HostListener} from "@angular/core";
 
 @Directive({
-  selector: 'button'
+  selector: 'button:not([button-track])'
 })
 
 export class ButtonTrackDirective {

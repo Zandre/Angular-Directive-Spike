@@ -335,8 +335,8 @@
   <div>
     <form [formGroup]="formGroup">
       <button mat-raised-button color="primary" (click)="onClickA()">Button A</button>
-      <button mat-raised-button color="primary" (click)="onClickB()">Button B</button>
-      <button mat-raised-button color="primary" (click)="onClickC()">Button C</button>
+      <button button-track mat-raised-button color="primary" (click)="onClickB()">Button B</button>
+      <button button-track mat-raised-button color="primary" (click)="onClickC()">Button C</button>
       <input formControlName="email" >
       <span *ngIf="formGroup.hasError('email', 'email') && formGroup.get('email')?.touched">
         Please enter the correct email, this email not valid.
