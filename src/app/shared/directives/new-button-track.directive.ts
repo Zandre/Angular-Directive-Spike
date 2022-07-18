@@ -1,5 +1,5 @@
 import { Directive, ElementRef } from "@angular/core";
-import { AbstractControl, FormGroup } from "@angular/forms";
+import { FormGroup } from "@angular/forms";
 
 @Directive({
   selector: '[button-track]'
@@ -12,7 +12,7 @@ export class NewButtonTrackDirective {
     console.info('ElementRef: ', elementRef);
   }
 
-  doStuff(formGroup: FormGroup): void {
+  public doStuff(formGroup: FormGroup): void {
     console.info(`New Track Directive: formGroup is ${formGroup.valid ? 'valid' : 'invalid'}`);
 
     if(formGroup.invalid) {
