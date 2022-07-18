@@ -8,6 +8,10 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  button {
+    margin-right: 8px;
+  }
+
   h1,
   h2,
   h3,
@@ -326,6 +330,18 @@
       <path id="Path_40" data-name="Path 40" d="M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z" transform="translate(-147.025 -140.939)" fill="#f5f5f5"/>
     </svg>
 
+  </div>
+
+  <div>
+    <form [formGroup]="formGroup">
+      <button mat-raised-button color="primary" (click)="onClickA()">Button A</button>
+      <button mat-raised-button color="primary" (click)="onClickB()">Button B</button>
+      <button mat-raised-button color="primary" (click)="onClickC()">Button C</button>
+      <input formControlName="email" >
+      <span *ngIf="formGroup.hasError('email', 'email') && formGroup.get('email')?.touched">
+        Please enter the correct email, this email not valid.
+      </span>
+    </form>
   </div>
 
   <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
