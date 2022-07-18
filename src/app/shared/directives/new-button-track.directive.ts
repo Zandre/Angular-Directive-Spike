@@ -13,6 +13,6 @@ export class NewButtonTrackDirective {
   }
 
   doStuff(formGroup: FormGroup): void {
-    console.info('New Track Directive FormGroup: ', formGroup);
+    console.info(`New Track Directive: formGroup is ${formGroup.valid ? 'valid' : 'invalid'}`);
   }
 }
