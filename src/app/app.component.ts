@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'DirectiveTest';
   formGroup: FormGroup;
 
-  @ViewChild(NewButtonTrackDirective) newButtonTrackDirective: any;
+  @ViewChild('buttonB', { read: NewButtonTrackDirective }) buttonB_TrackDirective: any;
 
   constructor(private formBuilder: FormBuilder) {
     this.formGroup = formBuilder.group({
@@ -25,7 +25,7 @@ export class AppComponent {
 
   public onClickB(): void {
     console.info('Component: Button B clicked');
-    this.newButtonTrackDirective?.doStuff(this.formGroup);
+    this.buttonB_TrackDirective?.doStuff(this.formGroup);
   }
 
   public onClickC(): void {
